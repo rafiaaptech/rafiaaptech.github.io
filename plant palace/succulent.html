@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Succulent</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Font Awsome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="icon" href="images/Logo2.png" type="image/x-icon">
+
+    <style>
+        h1 {
+            text-align: center;
+            padding-top: 29px;
+            font-size: 50px;
+            color: rgb(30, 77, 30);
+            text-shadow: 1px 3px black;
+            font-size: 40px;
+            margin-top: 5%;
+            font-weight: bolder;
+        }
+        
+        .img {
+            height: 290px;
+            width: 270px;
+            padding: 10px;
+            margin-top: 9%;
+            border-bottom-left-radius: 15%;
+            border-bottom-right-radius: 15%;
+            box-shadow: 5px 5px 5px rgb(94, 93, 93);
+            object-fit: cover;
+            border: 1px solid rgb(141, 73, 24);
+            border-top: 10px solid rgb(141, 73, 24);
+        }
+        
+        .row {
+            padding: 2%;
+            margin-top: 0%;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 9.8%;
+            left: 0;
+            width: 270px;
+            height: 290px;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            border-bottom-left-radius: 15%;
+            border-bottom-right-radius: 15%;
+        }
+        
+        .img-card {
+            position: relative;
+        }
+        
+        .img-card:hover .overlay {
+            opacity: 1;
+        }
+        
+        .card-title {
+            color: #f5f5f5;
+            font-family: 'Felix Titling';
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        .card-title1 {
+            text-align: center;
+            padding-top: 16px;
+            font-weight: lighter;
+            /* font-family: 'Felix Titling'; */
+            cursor: pointer;
+            font-size: 18px;
+            margin-left: -10%;
+        }
+        
+        .card-title1:hover {
+            background-color: linear-gradient(to right, rgb(148, 110, 87), rgb(129, 83, 40));
+        }
+        
+        .overlay-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            /* Adjust the gap between the buttons as needed */
+        }
+        
+        .add-to-cart-button {
+            background: none;
+            border: none;
+        }
+        
+        .buy-now-button {
+            background: none;
+            color: white;
+        }
+        
+        .i1 {
+            animation: 1s slide-right ease-in-out;
+        }
+        
+        @keyframes slide-right {
+            from {
+                margin-left: -120%;
+            }
+            to {
+                margin-left: 0%;
+            }
+        }
+        
+        .i2 {
+            animation: 1s slide-right ease-in-out;
+        }
+        
+        @keyframes slide-right {
+            from {
+                margin-left: -120%;
+            }
+            to {
+                margin-left: 0%;
+            }
+        }
+        
+        .i3 {
+            animation: 1s slide-right ease-in-out;
+        }
+        
+        @keyframes slide-right {
+            from {
+                margin-left: -120%;
+            }
+            to {
+                margin-left: 0%;
+            }
+        }
+        
+        .i4 {
+            animation: 1s slide-left;
+        }
+        
+        @keyframes slide-left {
+            from {
+                margin-left: 1002%;
+            }
+            to {
+                margin-left: 0%;
+            }
+        }
+        
+        .i5 {
+            animation: 1s slide-left;
+        }
+        
+        @keyframes slide-left {
+            from {
+                margin-left: 1002%;
+            }
+            to {
+                margin-left: 0%;
+            }
+        }
+        
+        .i6 {
+            animation: 1s slide-left;
+        }
+        
+        @keyframes slide-left {
+            from {
+                margin-left: 1002%;
+            }
+            to {
+                margin-left: 0%;
+            }
+        }
+        
+        .i7 {
+            animation: 1s slide-right ease-in-out;
+        }
+        
+        @keyframes slide-right {
+            from {
+                margin-left: -110%;
+            }
+            to {
+                margin-left: 0%;
+            }
+        }
+        
+        .i8 {
+            animation: 1s slide-right ease-in-out;
+        }
+        
+        @keyframes slide-right {
+            from {
+                margin-left: -110%;
+            }
+            to {
+                margin-left: 0%;
+            }
+        }
+        
+        .i9 {
+            animation: 1s slide-right ease-in-out;
+        }
+        
+        @keyframes slide-right {
+            from {
+                margin-left: -110%;
+            }
+            to {
+                margin-left: 0%;
+            }
+        }
+        
+        .bi-bag-fill {
+            color: rgb(250, 250, 250);
+            height: 180px !important;
+            width: 180px !important;
+        }
+        
+        .buy-now-button {
+            padding: 9px 18px;
+            /* background: linear-gradient(to right, rgb(136, 78, 23) , rgb(224, 179, 151)); */
+            border: none;
+            border-radius: 0px;
+            font-family: 'Felix Titling';
+            font-size: 0.8rem;
+        }
+        
+        .buy-now-button:hover {
+            background: linear-gradient(to right, rgb(104, 50, 17), rgb(167, 92, 22));
+            border-radius: 10px;
+            font-family: 'Felix Titling';
+        }
+        
+        .main {
+            /* background-image:linear-gradient(rgba(173, 170, 170, 0.5),rgba(173, 170, 170, 0.5)), url(https://i.pinimg.com/736x/83/13/f2/8313f2a4ef0b9e78100aef400aab5612.jpg); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .navbar-brand img {
+            height: 20%;
+            width: 15%;
+            margin-left: -5%;
+            margin-top: -3%;
+        }
+        
+        .navbar {
+            background-color: transparent;
+            ;
+        }
+        
+        .main {
+            /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/5330960.jpg'); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+        }
+        
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+        .navbar .nav-link {
+            color: rgb(8, 58, 27);
+            letter-spacing: 2%;
+            font-weight: 500;
+            /* padding: 5px 4px; */
+            /* text-shadow: 10px 2px rgb(0, 0, 0); */
+            text-transform: capitalize;
+            font-family: 'Segoe Script';
+            /* margin-left:600%; */
+            font-size: 25px;
+            text-align: center;
+        }
+        
+        .collapse {
+            margin-left: 30%;
+            margin-top: -8px;
+        }
+        
+        .nav-item {
+            padding: 15px;
+        }
+        
+        .navbar a:hover {
+            transition: ease-in 1s;
+            color: #ffffff;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        
+        .navbarDropdown {
+            color: white;
+        }
+        
+        .navbarDropdown :hover a {
+            color: black;
+        }
+        
+        .navbar-nav li {
+            /* padding-left: 10px;
+
+padding-right: 10px; */
+            text-align: right;
+        }
+        /* Footer style */
+        
+        .footer_top {
+            position: relative;
+            padding: 4vw 0;
+            text-align: center;
+            background: rgb(3, 58, 3);
+            overflow: hidden;
+            z-index: 2;
+        }
+        
+        .footer_top:before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: rotate(-30deg);
+            width: 20vw;
+            height: 300%;
+            background: rgb(3, 58, 3);
+            z-index: -1;
+        }
+        
+        .footer_top:after {
+            content: '';
+            position: absolute;
+            top: 75%;
+            left: 20%;
+            transform: rotate(-30deg) translate(0, -25%);
+            width: 20vw;
+            height: 20vw;
+            border-radius: 50vw;
+            background: rgb(3, 58, 3);
+            z-index: -1;
+        }
+        
+        .footer_top small {
+            font-size: 1vw;
+            font-weight: 500;
+            margin-bottom: 1vw;
+            color: #fff;
+        }
+        
+        .footer_top h2 {
+            font-size: 2vw;
+            font-weight: 500;
+            margin-bottom: 1vw;
+            color: #fff;
+        }
+        
+        .footer_top button {
+            font-size: 1.1vw;
+            margin-right: 2vw;
+            padding: .7vw 3vw;
+            border-radius: 1vw;
+            border: none;
+            box-shadow: 1px 1px 10px #00000010;
+            cursor: pointer;
+        }
+        
+        .footer_top button:nth-child(1) {
+            background: rgba(80, 147, 95, 0.799);
+            color: #fff;
+        }
+        
+        .footer_top button:nth-child(2) {
+            color: #000;
+            background: #fff;
+            font-weight: 500;
+        }
+        
+        .footer_top button:hover {
+            color: #fff;
+            background: rgba(80, 147, 95, 0.799);
+        }
+        
+        .footer_nav_list_portion {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            padding: 3vw 1vw;
+        }
+        
+        .footer_left_intro div {
+            color: #10044D;
+            font-size: 2vw;
+            margin-bottom: 1vw;
+            font-weight: 500;
+        }
+        
+        .footer_left_intro {
+            grid-column: 1/3;
+            padding-left: 2vw;
+            line-height: 2vw;
+        }
+        
+        .footer_left_intro small {
+            font-weight: 500;
+            font-size: 1.1vw;
+            color: #30265a;
+        }
+        
+        .footer_nav_list_portion ul {
+            margin: 1vw;
+            list-style: none;
+        }
+        
+        .footer_nav_list_portion ul li a {
+            display: block;
+            margin: .3vw 0;
+            padding: .4vw 1vw;
+            font-size: 1.1vw;
+            font-weight: 500;
+            color: #30265a;
+            cursor: pointer;
+            transition: .1s;
+        }
+        
+        .footer_nav_list_portion ul li a:hover {
+            font-weight: 600;
+            color: #10044D;
+        }
+        
+        .footer_nav_list ul li:nth-child(1) a {
+            color: black;
+            font-weight: 800;
+            position: relative;
+        }
+        
+        .footer_nav_list ul li:nth-child(1) a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            bottom: .1vw;
+            width: .2vw;
+            height: 50%;
+            transition: .2s;
+            background: rgb(3, 58, 3);
+        }
+        
+        .footer_nav_list ul li:nth-child(1) a:hover::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 100%;
+            transform: translate(0, -50%);
+            bottom: 0;
+            width: 50%;
+            transition: .2s;
+            height: .2vw;
+            background: rgb(3, 58, 3);
+        }
+        
+        .footer_bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .4vw 1vw .4vw 2vw;
+            border-top: 1px solid #dcdae6;
+        }
+        
+        .footer_bottom p {
+            font-size: 1.1vw;
+            font-weight: 500;
+            color: rgb(43, 39, 39);
+        }
+        
+        .footer_bottom ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 1vw;
+        }
+        
+        .footer_bottom ul li a {
+            padding: .5vw;
+            margin: 0 .4vw;
+            font-size: 1.3vw;
+            color: #10044D;
+        }
+        
+        @media (max-width:1000px) {
+            .footer_top {
+                padding: 45px 0;
+            }
+            .footer_top small {
+                font-size: 13px;
+            }
+            .footer_top h2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+                color: #10044D;
+            }
+            .footer_top button {
+                font-size: 14px;
+                margin-right: 20px;
+                padding: 10px 35px;
+                border-radius: 10px;
+                box-shadow: 1px 1px 10px #00000010;
+            }
+            .footer_nav_list_portion {
+                grid-template-columns: repeat(4, 1fr);
+                padding: 40px 20px;
+            }
+            .footer_nav_list ul li a {
+                font-size: 14px;
+            }
+            .footer_left_intro {
+                grid-column: 1/5;
+                text-align: center;
+                line-height: 20px;
+                margin-bottom: 20px;
+                padding-left: 0;
+            }
+            .footer_left_intro div {
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+            .footer_left_intro small {
+                font-size: 14px;
+                display: block;
+            }
+            .footer_bottom {
+                padding: 10px 20px;
+            }
+            .footer_bottom p {
+                font-size: 13px;
+            }
+            .footer_bottom ul li a {
+                margin: 0 6px;
+                font-size: 15px;
+            }
+        }
+        
+        @media (max-width:700px) {
+            .footer_nav_list_portion {
+                grid-template-columns: repeat(2, 1fr);
+                place-items: center;
+                text-align: center;
+            }
+            .footer_left_intro {
+                grid-column: 1/3;
+            }
+            .footer_nav_list ul li:nth-child(1) a {
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+            .footer_nav_list ul li:nth-child(1) a::before {
+                display: none;
+            }
+        }
+        
+        @media (max-width:500px) {
+            .footer_top button {
+                margin-bottom: 10px;
+            }
+            .footer_nav_list_portion {
+                padding: 40px 10px 0 10px;
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .footer_left_intro {
+                grid-column: 1/2;
+            }
+            .footer_nav_list {
+                margin-bottom: 20px;
+            }
+            .footer_bottom {
+                flex-direction: column;
+            }
+            .footer_bottom p {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar">
+
+        <div class="container-fluid">
+            <!-- 
+        <a class="navbar-brand" href="#">
+        <img src="logo1.png" alt="Logo">
+    </a> -->
+
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-top: 30px;">
+
+                    <li class="nav-item ">
+
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link ative" aria-current="page" href="../contactus.html">Contact</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link ative" aria-current="page" href="../catalog-R.html">category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+
+                </ul>
+                <i class="bi bi-basket3-fill" style="color: white;font-size:140%;margin-right:2%; margin-top: 30px;"></i>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid main">
+        <h1>SUCCULENT</h1>
+        <div class="row succ-row">
+            <div class="col-md-6 col-lg-4">
+                <div class="img-card i1">
+                    <img class="img" src="./images/succulent/Agave.jpg" alt="">
+                    <div class="overlay">
+                        <div class="overlay-buttons">
+                            <button class="add-to-cart-button"><i class="bi bi-bag-fill"></i></button>
+                            <button onclick="window.location.href = 'succulent/agave-dt.html';" class="buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="card-title1 i1">Agave</h3>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="img-card i2">
+                    <img class="img" src="./images/succulent/Burro's-tail.jpeg" alt="">
+                    <div class="overlay">
+                        <div class="overlay-buttons">
+                            <button class="add-to-cart-button"><i class="bi bi-bag-fill"></i></button>
+                            <button onclick="window.location.href = 'succulent/burros-tail.html';" class="buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="card-title1 i2">Burro's-tail</h3>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="img-card i3">
+                    <img class="img" src="./images/succulent/Echeveria.jpeg" alt="">
+                    <div class="overlay">
+                        <div class="overlay-buttons">
+                            <button class="add-to-cart-button"><i class="bi bi-bag-fill"></i></button>
+                            <button onclick="window.location.href = 'succulent/Echeveria.html';" class="buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="card-title1 i3">Echeveria</h3>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="img-card i4">
+                    <img class="img" src="./images/succulent/Florist Kalanchoe.jpg" alt="">
+                    <div class="overlay">
+                        <div class="overlay-buttons">
+                            <button class="add-to-cart-button"><i class="bi bi-bag-fill"></i></button>
+                            <button onclick="window.location.href = 'succulent/Florist Kalanchoe.html';" class="buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="card-title1 i4">Echeveria</h3>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="img-card i5">
+                    <img class="img" src="./images/succulent/Haworthia.jpeg" alt="">
+                    <div class="overlay">
+                        <div class="overlay-buttons">
+                            <button class="add-to-cart-button"><i class="bi bi-bag-fill"></i></button>
+                            <button onclick="window.location.href = 'succulent/Haworthia.html';" class="buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="card-title1 i5">Haworthia</h3>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="img-card i6">
+                    <img class="img" src="./images/succulent/Houseleek.jpeg" alt="">
+                    <div class="overlay">
+                        <div class="overlay-buttons">
+                            <button class="add-to-cart-button"><i class="bi bi-bag-fill"></i></button>
+                            <button onclick="window.location.href = 'succulent/houseleek1.html';" class="buy-now-button">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="card-title1 6">Houseleek</h3>
+            </div>
+
+            <!-- Footer Start -->
+            <!-- Footer Start -->
+            <div style="background-color: #fff;">
+                <!-- <div class="wrapper">
+    <div class="footer_top">
+        <div>
+            <small>Are you ready for registration</small>
+            <h2>Enter your email Address and get started for free</h2>
+        </div>
+        <div>
+            <button>Register now</button><button>Welcome back</button>
+        </div> -->
+            </div>
+            <div class="footer_nav_list_portion" style="margin-top: 100px;">
+                <div class="footer_left_intro">
+                    <div><img src="./images/Logo2.png" alt="" width="120px" height="120px" style="margin-left: 10px;"></div>
+                    <small>Where Nature 's Majesty Meets Your Home!</small>
+                    <br>
+                    <br>
+                    <p>Plant Palace website is an online platform dedicated to providing information, resources, and services related to plants, gardening, purchasing plants, and plant care. Plant Palace website cater to a wide range of audiences, including
+                        gardening enthusiasts, botany lovers, professionals in the agricultural and horticultural sectors, and even beginners looking to learn more about plants.</p>
+                </div>
+                <div class="footer_nav_list" style="margin-top: 100px;">
+                    <ul>
+
+                        <li><a>Our Pages</a></li>
+                        <li><a href="index.html" style="font-family: 'Bricolage Grotesque', sans-serif; color: black; text-decoration: none;">Home</a>
+                        </li>
+                        <li><a href="#contact" style="font-family: 'Bricolage Grotesque', sans-serif; color: black; text-decoration: none;">Contact
+            Us</a></li>
+                        <li><a href="#category" style="font-family: 'Bricolage Grotesque', sans-serif; color: black; text-decoration: none;">Categories</a>
+                        </li>
+                        <li><a href="#feedback" style="font-family: 'Bricolage Grotesque', sans-serif; color: black; text-decoration: none;">Feedback</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="footer_nav_list" style="margin-top: 100px;">
+                    <ul>
+                        <li><a>Usefull Links</a></li>
+                        <!-- <li><a style="font-family: 'Bricolage Grotesque', sans-serif; color: black; text-decoration: none;">Facebook</a></li>
+                <li><a style="font-family: 'Bricolage Grotesque', sans-serif; color: black; text-decoration: none;">Instagram</a></li>
+                <li><a style="font-family: 'Bricolage Grotesque', sans-serif; color: black; text-decoration: none;">Twitter</a></li> -->
+                        <li><a href="../reviews slider/reviews.html" style="font-family: 'Bricolage Grotesque', sans-serif; color: black; text-decoration: none;">Review</a>
+                        </li>
+                        <li><a href="Filter.html" style="font-family: 'Bricolage Grotesque', sans-serif; color: black; text-decoration: none;">Sorting/Filter</a>
+                        </li>
+                        <!-- <li><a>Sitemaps</a></li>
+                <li><a>Tutorials</a></li> -->
+                    </ul>
+                </div>
+
+                <div class="footer_nav_list" style="margin-top: 100px;">
+                    <ul>
+                        <li><a>Privacy & Policy</a></li>
+                        <li><a>Terms</a></li>
+                        <li><a>cookies</a></li>
+                        <li><a>licenses</a></li>
+                        <li><a>Enterprise</a></li>
+                        <li><a>SSL Certified</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer_bottom ">
+                <div>
+                    <p>&copy; copyright 2023 www.PlantPalace.com.</p>
+                </div>
+                <ul>
+                    <li><a href="https://www.twitter.com" target="self" style="color: #00acee;"><i
+            class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com" target="self" style="color:#0A66C2;"><i
+            class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com" target="self" style="color: #3b5998;"><i
+            class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com" target="self" style="color:  #bc2a8d"><i
+            class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.github.com" target="self" style="color: #000;"><i class="fa-brands fa-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End-->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

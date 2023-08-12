@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/Logo2.png" type="image/x-icon">
+    <style>
+        /* Testimonial css */
+        
+        .container {
+            margin-top: 10%;
+        }
+        
+        .box-area {
+            padding: 30px;
+            height: 400px;
+            width: 78%;
+            position: relative;
+            display: block;
+            background: #08462fa4;
+            color: #013220;
+            /* border: 2px solid 	#013220;
+    box-shadow: 2px 2px 10px #90EE90; */
+            margin: 40px 0;
+            margin-left: 45px;
+        }
+        
+        .box-area h5 {
+            font-size: 24px;
+            background: transparent;
+            font-weight: 750;
+            color: #000;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            margin-top: 30px;
+            margin-bottom: 5px;
+        }
+        
+        .box-area span {
+            color: #000;
+            display: block;
+            font-size: 15px;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            margin: 0 0 10px;
+            background: transparent;
+            font-weight: bolder;
+        }
+        
+        .box-area .content {
+            background: transparent;
+            text-align: center;
+            margin-top: 6%;
+            font-family: 'Quicksand', sans-serif;
+            color: #ffffff;
+            font-size: 16px;
+            text-align: justify;
+        }
+        
+        .box-area .img-area {
+            width: 90px;
+            height: 9 0px;
+            top: -40px;
+            left: 0;
+            bottom: 0;
+            margin: 0 auto;
+            right: 0;
+            /* z-index: 1; */
+            border: 2px solid rgba(0, 0, 0, 0.575);
+            border-radius: 50%;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.623);
+        }
+        
+        .box-area .img-area img {
+            width: 90px;
+            margin-top: -6%;
+            border: 1px solid rgba(0, 0, 0, 0.651);
+            margin-left: -6%;
+            height: 90px;
+            height: auto;
+            border-radius: 50%;
+        }
+        
+        .socials {
+            margin-top: 40px;
+            /* background: transparent; */
+            text-align: center;
+        }
+        
+        .socials i {
+            margin: 0 10px;
+            /* background: transparent; */
+            /* color: #000; */
+            font-size: 21px;
+        }
+        
+        #testimonial_area .owl-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+        }
+        
+        #testimonial_area .owl-prev,
+        #testimonial_area .owl-next {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            color: #000;
+            border-radius: 50%;
+            text-align: center;
+            background: #000;
+            position: absolute;
+        }
+        
+        #testimonial_area .owl-prev {
+            background: transparent;
+            left: -4px;
+            top: -30px;
+        }
+        
+        #testimonial_area .owl-next {
+            background: transparent;
+            right: -0px;
+            top: -30px;
+        }
+        
+        @media only screen and (max-width: 991px) {
+            .owl-nav {
+                display: none;
+            }
+        }
+        
+        @media only screen and (max-width: 767px) {
+            .box-area {
+                text-align: center;
+            }
+            .owl-nav {
+                display: none;
+            }
+        }
+        
+        .hr-gap-testimonial {
+            border: 1px solid;
+            padding: 0.04%;
+            margin-top: 20%;
+            box-shadow: 0px 0px 20px #FFF;
+        }
+        
+        .testimonial-heading {
+            color: #FFF;
+            margin-bottom: -7%;
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 45px;
+            font-family: 'Quicksand', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="testimonial_area" class="section_padding">
+        <h1 class="testimonial-heading" style="color:rgb(3, 58, 3); font-family: 'Quicksand', sans-serif;">OUR REVIEWS</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="testmonial_slider_area text-center owl-carousel animate__animated animate__backInLeft">
+
+                        <!-- review 1 -->
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="images/p1.png" alt="">
+                            </div>
+                            <h5>Tom Ellis</h5>
+                            <span>Best Service Provider</span>
+                            <p class="content">
+                                Amazing aquarium! Better than I'd hoped. Very unique with great custom aquarium features that make it so much fun. It looked like it would be really busy from the line to get in but the inside was well designed.
+                            </p>
+                            <h6 class="socials">
+                                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"  style="color: #be4197;"></i></a>
+                                <a href="https://www.facebook.com" target="_blank"> <i class="fa-brands fa-facebook-f" style="color: #3b5998;"></i></a>
+                                <a href="https://www.linkedin.com" target="_blank"> <i class="fa-brands fa-linkedin-in" style="color: #0A66C2;"></i></a>
+                                <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube" style="color: #c4302b;"></i></a>
+                            </h6>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="images/p2.png" alt="">
+                            </div>
+                            <h5>Kylie Jenner</h5>
+                            <span>Awesome Place</span>
+                            <p class="content">
+                                This was an awesome experience for my husband and I. It had tons of cool things for both adults and kids. They had a sea life petting a area pet anemones and starfish was really neat! Awesome view of fishes etc.
+                            </p>
+                            <h6 class="socials">
+                                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"  style="color: #bc2a8d;"></i></a>
+                                <a href="https://www.facebook.com" target="_blank"> <i class="fa-brands fa-facebook-f" style="color: #3b5998;"></i></a>
+                                <a href="https://www.linkedin.com" target="_blank"> <i class="fa-brands fa-linkedin-in" style="color: #0A66C2;"></i></a>
+                                <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube" style="color: #c4302b;"></i></a>
+                            </h6>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="images/p3.png" alt="">
+                            </div>
+                            <h5>Chris Hemsworth</h5>
+                            <span>Most Beautiful Aquariums</span>
+                            <p class="content">
+                                I wish it was a little bit bigger and a space that you could walk around rather than just in walk-through. It would be a nice if you could just walk around freely and go back and look at the exhibits. I love it!
+
+                            </p>
+                            <h6 class="socials">
+                                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"  style="color: #bc2a8d;"></i></a>
+                                <a href="https://www.facebook.com" target="_blank"> <i class="fa-brands fa-facebook-f" style="color: #3b5998;"></i></a>
+                                <a href="https://www.linkedin.com" target="_blank"> <i class="fa-brands fa-linkedin-in" style="color: #0A66C2;"></i></a>
+                                <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube" style="color: #c4302b;"></i></a>
+                            </h6>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="images/p4.png" alt="">
+                            </div>
+                            <h5>Sadie Sink</h5>
+                            <span>All Awesome Creatures </span>
+                            <p class="content">
+                                This was the best experience ever I went with my daughters and this was our first time to Aquarium it was an amazing. My daughter had a great time at all the stamp stations fishes. She got them and got a reward.
+                            </p>
+                            <h6 class="socials">
+                                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"  style="color: #bc2a8d;"></i></a>
+                                <a href="https://www.facebook.com" target="_blank"> <i class="fa-brands fa-facebook-f" style="color: #3b5998;"></i></a>
+                                <a href="https://www.linkedin.com" target="_blank"> <i class="fa-brands fa-linkedin-in" style="color: #0A66C2;"></i></a>
+                                <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube" style="color: #c4302b;"></i></a>
+                            </h6>
+                        </div>
+
+                        <!-- Review 5 -->
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="images/p5.png" alt="">
+                            </div>
+                            <h5>Robert Pattinson</h5>
+                            <span>Lovely sea creatures</span>
+                            <p class="content">
+                                A great aquarium with all sorts of fish to admire. Not too long but certainly not too short. That together with the given informations you can get for each fish you makes up for a great aquarium. Really Love it!
+
+                            </p>
+                            <h6 class="socials">
+                                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"  style="color: #bc2a8d;"></i></a>
+                                <a href="https://www.facebook.com" target="_blank"> <i class="fa-brands fa-facebook-f" style="color: #3b5998;"></i></a>
+                                <a href="https://www.linkedin.com" target="_blank"> <i class="fa-brands fa-linkedin-in" style="color: #0A66C2;"></i></a>
+                                <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube" style="color: #c4302b;"></i></a>
+                            </h6>
+                        </div>
+
+                        <!-- Review 6 -->
+                        <div class="box-area">
+                            <div class="img-area">
+                                <img src="images/p6.png" alt="">
+                            </div>
+                            <h5>Scarlett johanson</h5>
+                            <span>Best Marine Events</span>
+                            <p class="content">
+                                I had a very good experience coming here! I brought my baby absolutely loved it. whole experience there very great! We thanked her a lot she made my son smile the whole entire time. Customer service was amazing.
+                            </p>
+                            <h6 class="socials">
+                                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"  style="color: #bc2a8d;"></i></a>
+                                <a href="https://www.facebook.com" target="_blank"> <i class="fa-brands fa-facebook-f" style="color: #3b5998;"></i></a>
+                                <a href="https://www.linkedin.com" target="_blank"> <i class="fa-brands fa-linkedin-in" style="color: #0A66C2;"></i></a>
+                                <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube" style="color: #c4302b;"></i></a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+
+    <script>
+        $(".testmonial_slider_area").owlCarousel({
+            autoplay: true,
+            slideSpeed: 1000,
+            items: 3,
+            loop: true,
+            nav: true,
+            navText: ['<i class="fa fa-arrow-left"></i>', '<i class="fa fa-arrow-right"></i>'],
+            margin: 30,
+            dots: true,
+            responsive: {
+                320: {
+                    items: 1
+                },
+                767: {
+                    items: 2
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+
+        });
+    </script>
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+
+
+
+</html>

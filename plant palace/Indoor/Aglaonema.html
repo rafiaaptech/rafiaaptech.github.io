@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Aglaonema</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        .down{
+            padding: 15px;
+
+        }
+        .add{
+            border: none;
+            padding: 10px 90px;
+            margin: 10px;
+            margin-left: 45% !important;
+            background: rgb(184, 113, 85);
+            border-radius: 10px;
+        }
+        .buy{
+            border: none;
+            padding: 10px 98px;
+            margin: 10px;
+            margin-left: 45% !important;
+            background-color: rgb(145, 77, 50);
+            border-radius: 10px;
+        }
+
+        .navbar {
+background-color: transparent;
+;
+    }
+    
+    .main {
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/5330960.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+height: 100vh;
+    }
+    
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+
+.navbar .nav-link {
+color: rgb(8, 58, 27);
+letter-spacing: 2%;
+font-weight: 500;
+/* padding: 5px 4px; */
+/* text-shadow: 10px 2px rgb(0, 0, 0); */
+text-transform:capitalize;
+font-family: 'Segoe Script';
+/* margin-left:600%; */
+font-size: 25px;
+text-align: center;
+
+
+    }
+.collapse{
+    margin-left: 30%;
+    margin-top: -8px;
+}
+.nav-item{
+    padding: 15px;
+}
+    .navbar a:hover {
+transition: ease-in 1s;
+color: #ffffff;
+-webkit-animation: glow 1s ease-in-out infinite alternate;
+-moz-animation: glow 1s ease-in-out infinite alternate;
+animation: glow 1s ease-in-out infinite alternate;
+    }
+    
+    .navbarDropdown {
+color: white;
+    }
+    
+    .navbarDropdown :hover a {
+color: black;
+    }
+    
+    .navbar-nav li {
+/* padding-left: 10px;
+
+padding-right: 10px; */
+text-align: right;
+    }
+    /* Add this CSS to style the cart items in the off-canvas */
+.cart-items-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-name {
+    font-weight: bold;
+}
+
+.cart-item-quantity {
+    font-size: 14px;
+    color: #666;
+    margin-right: 10px;
+}
+
+.remove-button {
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+    </style>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar">
+                
+        <div class="container-fluid">
+<!-- 
+            <a class="navbar-brand" href="#">
+            <img src="logo1.png" alt="Logo">
+        </a> -->
+
+       
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-top: 30px;">
+                    
+                    <li class="nav-item ">
+                        
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link ative" aria-current="page" href="../contactus.html">Contact</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link ative" aria-current="page" href="../catalog-R.html">category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+
+                </ul>
+        
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container-fluid">
+        <div class="row" style="padding: 5%;">
+            <div class="col-md-4 col-lg-6 col-sm-12" >
+                <h1 class="text-center" style="font-family: 'Felix Titling';">Aglaonema</h1>
+                <hr width="650px">
+                <img id="mainImage" src="../images/Aglaonema/2.jpg" alt="target" width="650px" height="650px">
+            </div>
+            <div class="col-md-4 col-lg-6 col-sm-12" style="padding-left: 9%;">
+                <h1 style="font-family: 'Felix Titling'; margin-top: 20%; text-align: left;">About</h1>
+                <p style="text-align: left;">Aglaonema is a genus of flowering plants in the arum family, Araceae. They are native to tropical and subtropical 
+                    regions of Asia and New Guinea.
+                    They are known commonly as <b>Chinese evergreens</b>.These are evergreen perennials with stems growing erect or 
+                    decumbent and creeping. Stems that grow along the ground may root at the nodes. There is generally a crown of wide leaf blades which 
+                    in wild species are often variegated with silver and green coloration.</p>
+                <h4 style="text-align: left;">Common name:</h4>
+                <p style="text-align: left;">Chinese Evergreen</p>
+                <h4 style="text-align: left;">Scientific name:</h4>
+                <p style="text-align: left;">Aglaonema</p>
+                <h4 style="text-align: left;">Origin Country:</h4>
+                <p style="text-align: left;">Asia and New Guinea</p>
+                <h4 style="text-align: left;">Watering Cycle:</h4>
+                <p style="text-align: left;">Once every two weeks</p>
+                <h4 style="text-align: left;">Light Requirements:</h4>
+                <p style="text-align: left;">Bright to medium indirect light</p>
+                <h4 style="text-align: left;">Price:</h4>
+                <p style="text-align: left;"><b>14$</b></p>
+                
+            </div>
+        </div>
+
+        <div class="row" style="padding-left: 10%; padding-bottom: 10px; margin: 10px;">
+            <div class="col-lg-3 down" style="height: 200px; width: 170px;">
+                <img width="170" height="170" src="../images/Aglaonema/2.jpg">
+            </div>
+            <div class="col-lg-3 down" style="height: 200px; width: 170px;">
+                <img width="170" height="170" src="../images/Aglaonema/6.webp">
+            </div>
+            <div class="col-lg-3 down" style="height: 200px; width: 170px;">
+                <img width="170" height="170" src="../images/Aglaonema/4.jpg">
+            </div>
+            <div class="col-lg-3 down" style="height: 170px; width: 600px;">
+                <button class="btn btn-primary add" data-item-name="Aglaonema" onclick="addToCart('Aglaonema')" data-item-price="14" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <i class="bi bi-bag-fill " onclick="addToCart('Aglaonema')"> Add To Cart</i>
+                  </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            var $images = $('.down img');
+        
+            $images.click(function() {
+                var newImageSrc = $(this).attr('src');
+                $('#mainImage').attr('src', newImageSrc);
+            });
+        });
+    </script>
+        <script>
+
+            // Initialize an empty cart array
+      let cartItems = [];
+      
+      // Function to add an item to the cart
+      function addToCart(itemName) {
+        // Check if the item is already in the cart
+        const existingItem = cartItems.find(item => item.name === itemName);
+    
+        if (existingItem) {
+            // Increment the quantity of the existing item
+            existingItem.quantity++;
+            existingItem.totalPrice = existingItem.quantity * existingItem.price;
+        } else {
+            // Add a new item to the cart
+            const itemPrice = parseFloat(document.querySelector(`[data-item-name="${itemName}"]`).getAttribute("data-item-price"));
+            cartItems.push({ name: itemName, quantity: 1, price: itemPrice, totalPrice: itemPrice });
+        }
+      
+          // Update the UI
+          updateCartUI();
+          updateCartCount();
+      }
+      
+      function removeFromCart(itemName) {
+          const itemIndex = cartItems.findIndex(item => item.name === itemName);
+          if (itemIndex !== -1) {
+              cartItems.splice(itemIndex, 1);
+              updateCartUI();
+              updateCartCount();
+          }
+      }
+      
+      
+      function updateCartUI() {
+        const cartContainer = document.querySelector(".cart-items-container");
+        cartContainer.innerHTML = ""; // Clear the previous content
+    
+        // Populate the cart items in the UI
+        cartItems.forEach(item => {
+            const cartItemDiv = document.createElement("div");
+            cartItemDiv.classList.add("cart-item");
+    
+            const itemName = document.createElement("span");
+            itemName.classList.add("cart-item-name");
+            itemName.textContent = item.name;
+    
+            const itemQuantity = document.createElement("span");
+            itemQuantity.classList.add("cart-item-quantity");
+            itemQuantity.textContent = `(Qty: ${item.quantity})`;
+    
+            const itemPrice = document.createElement("span");
+            itemPrice.classList.add("cart-item-price");
+            itemPrice.textContent = `Price: $${item.totalPrice.toFixed(2)}`;
+    
+            const removeButton = document.createElement("button");
+            removeButton.classList.add("remove-button");
+            removeButton.textContent = "Remove";
+            removeButton.addEventListener("click", () => removeFromCart(item.name));
+    
+            cartItemDiv.appendChild(itemName);
+            cartItemDiv.appendChild(itemQuantity);
+            cartItemDiv.appendChild(itemPrice);
+            cartItemDiv.appendChild(removeButton);
+            cartContainer.appendChild(cartItemDiv);
+        });
+        const totalCartPrice = cartItems.reduce((total, item) => total + item.totalPrice, 0);
+        const totalCartPriceElement = document.createElement("span");
+        totalCartPriceElement.classList.add("cart-total-price");
+        totalCartPriceElement.textContent = `Total: $${totalCartPrice.toFixed(2)}`;
+    
+        cartContainer.appendChild(totalCartPriceElement);
+    }
+      
+      // Inside your script tag
+      document.addEventListener("DOMContentLoaded", () => {
+          const addToCartButtons = document.querySelectorAll(".add-to-cart-button");
+          addToCartButtons.forEach(button => {
+              button.addEventListener("click", () => {
+                  const itemName = button.getAttribute("data-item-name");
+                  addToCart(itemName);
+                  updateCartCount();
+              });
+          });
+      });
+      
+      // update cart count in nav
+      
+      function updateCartCount() {
+          const cartCountElement = document.getElementById("cart-count");
+          const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
+          cartCountElement.textContent = totalQuantity;
+      }
+      
+        </script>
+</body>
+</html>
+</head>

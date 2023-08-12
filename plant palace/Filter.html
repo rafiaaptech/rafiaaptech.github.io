@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .sidebar {
+        width: 25%;
+        height: 100vh;
+        padding: 50px 0;
+        background-color: #187e53;
+        position: fixed;
+    }
+
+    .sidebar h3 {
+        color: #b4f5da;
+        padding-left: 40px;
+        text-align: center;
+        margin-left: -60px;
+        font-size: 22px;
+        font-family: 'Kanit', sans-serif;
+    }
+
+    .filter {
+        margin-top: 50px;
+        padding: 30px 40px;
+    }
+
+    .filter h3 {
+        margin-bottom: 30px;
+    }
+
+    .contant {
+        width: 75%;
+        position: absolute;
+        right: 0;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+        border-bottom: 1px solid #eee;
+        color: #383838;
+        background-color: #eee;
+    }
+
+    .header p {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .fil-p {
+        padding: 15px 15px;
+        background-color: white;
+        margin: 7px 0;
+        cursor: pointer;
+        color: #333;
+        text-align: justify;
+        font-size: 17px;
+    }
+
+    .fil-p:hover {
+        color: #48cf97;
+        background-color: #135e3f;
+    }
+
+    button {
+        width: 100%;
+        position: relative;
+        border: none;
+        border-radius: 5px;
+        /* background-color: #aaa; */
+        padding: 7px 25px;
+        cursor: pointer;
+        color: white;
+    }
+
+    #root {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        padding: 30px;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #ddd;
+        padding: 15px;
+    }
+
+    .box>h3 {
+        margin-bottom: 20px;
+    }
+
+    .img-box {
+        width: 100%;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .images {
+        max-height: 90%;
+        max-width: 90%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .bottom {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+    }
+
+    h2 {
+        font-size: 20px;
+        color: #023a23;
+    }
+
+    button:hover {
+        background-color: #6ccca4;
+    }
+
+    .contant
+    {
+        font-family: 'Kanit', sans-serif;
+    }
+    .btns
+    {
+        font-family: 'Kanit', sans-serif;
+    }
+    .bi-sort-alpha-down
+{
+font-size: 25px;
+color: #023a23;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="filter">
+                <h3>Categories</h3>
+                <button class="btn btn-success btn-sort" onclick="displayItem(sortedProductsByTitle);">
+                    <i class="bi bi-sort-alpha-down"></i>
+                </button>
+                <div id="btns"></div>
+            </div>
+        </div>
+    </div>
+    <div class="contant">
+        <!-- <div class="header">
+            <p>Plant Categories</p>
+        </div> -->
+        <div id="root"></div>
+        
+    </div>
+
+    
+
+    <script>
+        const btns = [
+
+        {
+        id: 0, 
+        name: 'All'
+    },
+            {
+                id: 1,
+                name: 'Indoor'
+            },
+            {
+                id: 2,
+                name: 'Outdoor'
+            },
+            {
+                id: 3,
+                name: 'Shrub'
+            },
+            {
+                id: 4,
+                name: 'Succlent'
+            },
+
+            // {
+            //     id: 5,
+            //     name: 'All'
+            // },
+        ]
+
+        const filters = [...new Set(btns.map((btn) => { return btn }))]
+
+        document.getElementById('btns').innerHTML = filters.map((btn) => {
+            var { name, id } = btn;
+            return (
+                "<button class='fil-p' onclick='filterItems(" + (id) + `)'>${name}</button>`
+            )
+        }).join('');
+
+        const product = [
+            {
+                id: 1,
+                image: './images/African/22.jpg',
+                title: 'African Violets',
+                price: 10,
+                category: 'Indoor'
+            },
+            {
+                id: 1,
+                image: './images/Aglaonema/2.jpg',
+                title: 'Aglaonema',
+                price: 15,
+                category: 'Indoor'
+            },
+            {
+                id: 1,
+                image: './images/Anthurium/2.png',
+                title: 'Anthurium',
+                price: 20,
+                category: 'Indoor'
+            },
+            {
+                id: 1,
+                image: './images/Epipremnum/2.webp',
+                title: 'Epipremnum',
+                price: 17,
+                category: 'Indoor'
+            },
+            {
+                id: 1,
+                image: './images/Fiddle/5.webp',
+                title: 'Fiddle-leaf',
+                price: 25,
+                category: 'Indoor'
+            },
+            {
+                id: 1,
+                image: './images/Jade/2.webp',
+                title: 'Jade Plant',
+                price: 12,
+                category: 'Indoor'
+            },
+
+
+
+            {
+                id: 2,
+                image: './images/Begonia/2.jpg',
+                title: 'Begonia',
+                price: 21,
+                category: 'Outdoor'
+            },
+            {
+                id: 2,
+                image: './images/Bougainvillea/4.webp',
+                title: 'Bougainvillea',
+                price: 24,
+                category: 'Outdoor'
+            },
+            {
+                id: 2,
+                image: './images/Caladium/2.jpg',
+                title: 'Caladium',
+                price: 14,
+                category: 'Outdoor'
+            },
+
+
+            {
+                id: 2,
+                image: './images/Hibiscus/2.jpg',
+                title: 'Hibiscus',
+                price: 19,
+                category: 'Outdoor'
+            },
+            {
+                id: 2,
+                image: './images/Lavender/3.jpg',
+                title: 'Lavender',
+                price: 30,
+                category: 'Outdoor'
+            },
+            {
+                id: 2,
+                image: './images/Snake/3.jpg',
+                title: 'Snake plant',
+                price: 45,
+                category: 'Outdoor'
+            },
+
+
+
+
+
+
+            {
+                id: 3,
+                image: './images/shrub/Azalea2.jpg',
+                title: 'Azalea',
+                price: 26,
+                category: 'Shrub'
+            },
+
+            {
+                id: 3,
+                image: './images/shrub/B2.jpg',
+                title: 'Buddleja-davidii',
+                price: 27,
+                category: 'Shrub'
+            },
+
+            {
+                id: 3,
+                image: './images/shrub/Camellia1.jpg',
+                title: 'Camellia',
+                price: 38,
+                category: 'Shrub'
+            },
+
+            {
+                id: 3,
+                image: './images/shrub/Forsythia.jpeg',
+                title: 'Forsythia',
+                price: 31,
+                category: 'Shrub'
+            },
+
+
+
+
+
+
+
+            {
+                id: 4,
+                image: './images/succulent/Agave1.webp',
+                title: 'Agave',
+                price: 60,
+                category: 'Succulent'
+            },
+
+            {
+                id: 4,
+                image: './images/succulent/Burro.jpg',
+                title: 'Burros-tail',
+                price: 55,
+                category: 'Succulent'
+            },
+
+            {
+                id: 4,
+                image: './images/succulent/Echeveria2.jpeg',
+                title: 'Echeveria',
+                price: 34,
+                category: 'Succulent'
+            },
+
+            {
+                id: 4,
+                image: './images/succulent/Florist.jpg',
+                title: 'Florist Kalanchoe',
+                price: 42,
+                category: 'Succulent'
+            },
+
+            {
+                id: 4,
+                image: './images/succulent/Haworthia.jpeg',
+                title: 'Haworthia',
+                price: 21,
+                category: 'Succulent'
+            },
+
+            {
+                id: 4,
+                image: './images/succulent/Houseleek.jpeg',
+                title: 'Houseleek',
+                price: 50,
+                category: 'Succulent'
+            },
+        ];
+
+        const categories = [...new Set(product.map((item) => { return item }))]
+
+        const filterItems = (categoryId) => {
+    if (categoryId === 0) { // Check if the selected category is "All"
+        displayItem(product); // Display all products
+    } else {
+        const filteredItems = product.filter(item => item.id === categoryId);
+        displayItem(filteredItems);
+    }
+}
+
+        const displayItem = (items) => {
+            document.getElementById('root').innerHTML = items.map((item) => {
+                var { image, title, price } = item;
+                return (
+                    `<div class='box'>
+			<h3>${title}</h3>
+			<div class='img-box'>
+			<img class='images' src=${image}></img>
+			</div>
+			<div class='bottom'>
+			<h2>$ ${price}.00</h2>
+			</div>
+			</div>`)
+            }).join('');
+        }
+        displayItem(categories);
+
+        // Your existing code for btns, filters, categories, product, and displayItem functions...
+
+  function bubbleSortProductsByTitle(arr) {
+    const len = arr.length;
+
+    for (let i = 0; i < len - 1; i++) {
+      for (let j = 0; j < len - i - 1; j++) {
+        if (arr[j].title > arr[j + 1].title) {
+          const temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+        }
+      }
+    }
+
+    return arr;
+  }
+
+  const sortedProductsByTitle = bubbleSortProductsByTitle(product);
+
+  // Display products sorted by title
+    </script>
+</body>
+
+</html>
